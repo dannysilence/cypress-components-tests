@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+      "target": "ES2015",
+      "lib": ["ES2015", "dom"],
+      "types": ["cypress", "node"],
+      "declaration": false,
+      "strict": false,
+      "moduleResolution": "node",
+      "module": "CommonJS",
+      "noEmit": false
+    },
+    //"files": ["src"],
+    "include": [
+      "**/*.ts"
+    ],
+    "exclude":[  
+
+    ]
+}
+  

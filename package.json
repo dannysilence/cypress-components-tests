@@ -1,0 +1,27 @@
+{
+  "name": "cypress-components-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc -p ./tsconfig.json --watch --watchFile usefseventsonparentdirectory",
+    "test": "npx cypress run --e2e --browser firefox"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dannysilence/cypress-components-tests.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dannysilence/cypress-components-tests/issues"
+  },
+  "homepage": "https://github.com/dannysilence/cypress-components-tests#readme",
+  "dependencies": {
+    "cypress": "^10.1.0"
+  },
+  "devDependencies": {
+    "cypress-components": "file:../cypress-components",
+    "typescript": "^4.7.3"
+  }
+}
