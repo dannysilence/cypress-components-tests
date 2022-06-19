@@ -10,19 +10,3 @@ declare global {
         }
     }
 }  
-
- 
-// cypress/support/index.ts
-Cypress.Commands.add<'dropdown', 'optional'>(
-    'dropdown',
-    { prevSubject: 'optional' },
-    (subject?:JQuery<HTMLElement>, locator = '', options?) => {
-        if(subject) {
-            const x = new Dropdown(subject.get()[0]);
-            return cy.wrap(x);
-        } 
-
-        return cy.get(locator).dropdown();
-    }
-  )
-  
