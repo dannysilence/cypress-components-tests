@@ -15,7 +15,7 @@ export default defineConfig({
         specPattern: "cypress/e2e/*.cy.ts",
         supportFile: "cypress/support/e2e.ts",
         setupNodeEvents: (on, config) => {
-            // us
+            // 
         }
     }
 })
