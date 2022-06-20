@@ -18,10 +18,10 @@
   },
   "homepage": "https://github.com/dannysilence/cypress-components-tests#readme",
   "dependencies": {
+    "@dannysilence/cypress-components": "^1.0.16-0",
     "cypress": "^10.1.0"
   },
   "devDependencies": {
-    "cypress-components": "file:../cypress-components",
     "typescript": "^4.7.3"
   }
 }
