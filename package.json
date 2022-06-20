@@ -19,7 +19,7 @@
   "homepage": "https://github.com/dannysilence/cypress-components-tests#readme",
   "dependencies": {
     "cypress": "^10.1.0", 
-    "@dannysilence/cypress-components" : "*" 
+    "@dannysilence/cypress-components" : "1.0.16-0" 
   },
   "devDependencies": {
     "typescript": "^4.7.3"
