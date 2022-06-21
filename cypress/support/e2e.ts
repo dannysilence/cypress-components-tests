@@ -1,7 +1,7 @@
 /// <reference types="cypress"/>
 
 import { PartialObject } from 'cypress/types/lodash';
-import { Component, ComponentOptions, Dropdown, DropdownOptions, Factory, Table, TableOptions } from 'cypress-components/dist/components';
+import { Component, ComponentOptions, Dropdown, DropdownOptions, Factory, Table, TableOptions } from '@dannysilence/cypress-components/dist/components';
 
 declare global {
     namespace Cypress {
