@@ -61,6 +61,13 @@ describe('Components class', { env: { testReq: [''] }}, function() {
             })        
         });
 
+        it(' should provides elements enabled properly', { env: { testKey: '' }}, function() {
+            cy.component('input#text1').should(($el) => {
+                cy.log('Element Enabled: ' + $el.Enabled);
+
+                expect($el.Enabled).to.eq(true);
+            })        
+        });
     });
 
     context(' for disabled <INPUT> element', { env: { allowedAt: [''] }}, function() {
@@ -88,6 +95,14 @@ describe('Components class', { env: { testReq: [''] }}, function() {
                 cy.log($el.Color);
 
                 expect($el.Color).to.eq('rgba(239, 239, 239, 0.3)');
+            })        
+        });
+
+        it(' should provides elements enabled properly', { env: { testKey: '' }}, function() {
+            cy.component('input#text2').should(($el) => {
+                cy.log('Element Enabled: ' + $el.Enabled);
+
+                expect($el.Enabled).to.eq(false);
             })        
         });
 
