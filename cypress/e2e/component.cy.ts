@@ -53,6 +53,26 @@ describe('Components class', { env: { testReq: [''] }}, function() {
             })        
         });
 
+        it(' should set elements text via its Text property', { env: { testKey: '' }}, function() {
+            cy.component('#text1').should('have.property', 'Text', '');
+            cy.component('#text1').then($el => { $el.Text = 'Hello'; })
+            cy.component('#text1').its('Text').should('eq', 'Hello');        
+        });
+
+
+        it(' should also set elements text via its setText method', { env: { testKey: '' }}, function() {
+            cy.component('#text1').should('have.property', 'Text', '');
+            cy.component('#text1').invoke('setText', 'World');
+            cy.component('#text1').its('Text').should('eq', 'World');        
+        });
+
+
+        iskipt(' should also set elements text via type method', { env: { testKey: '' }}, function() {
+            cy.component('#text1').should('have.property', 'Text', '');
+            cy.component('#text1').invoke('type', 'World');
+            cy.component('#text1').its('Text').should('eq', 'World');        
+        });
+
         it(' should also take elements color properly', { env: { testKey: '' }}, function() {
             cy.component('input#text1').should(($el) => {
                 cy.log($el.Color);
