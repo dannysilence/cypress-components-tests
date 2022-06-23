@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/dannysilence/cypress-components-tests#readme",
   "dependencies": {
-    "@dannysilence/cypress-components": "^1.0.23-0",
+    "@dannysilence/cypress-components": "^1.0.25",
     "cypress": "^10.1.0"
   },
   "devDependencies": {

@@ -67,7 +67,7 @@ describe('Components class', { env: { testReq: [''] }}, function() {
         });
 
 
-        iskipt(' should also set elements text via type method', { env: { testKey: '' }}, function() {
+        it.skip(' should also set elements text via type method', { env: { testKey: '' }}, function() {
             cy.component('#text1').should('have.property', 'Text', '');
             cy.component('#text1').invoke('type', 'World');
             cy.component('#text1').its('Text').should('eq', 'World');        
