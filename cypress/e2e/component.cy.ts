@@ -4,9 +4,9 @@ describe('Components class', { env: { testReq: ['JIRA-001'] }}, function() {
         cy.visit('http://localhost:1234/');
     });
 
-    context(' for simple <H1> element', { env: { allowedAt: ['dev','test'], testReq: ['JIRA-1234'] }}, function() {
+    context.only(' for simple <H1> element', { env: { allowedAt: ['dev','test'], testReq: ['JIRA-1234'] }}, function() {
 
-        it.only(' should be located by tag', { env: { testKey: 'JIRA-123' }}, function() {
+        it(' should be located by tag', { env: { testKey: 'JIRA-123' }}, function() {
             cy.component('h1').should(($el) => {
                 cy.log($el.Text);
 
@@ -23,9 +23,19 @@ describe('Components class', { env: { testReq: ['JIRA-001'] }}, function() {
         });
 
         it(' should also take elements color properly', { env: { testKey: '' }}, function() {
+            //cy.wrap(2).should('be.above', 10);
+
             cy.component('h1').should(($el) => {
                 cy.log($el.Color);
+                expect($el.Color).to.eq('rgba(0, 0, 0, 0)');
+            })        
+        });
 
+        it.skip(' should also be skipped', { env: { testKey: '' }}, function() {
+            cy.wrap(2).should('be.above', 10);
+
+            cy.component('h1').should(($el) => {
+                cy.log($el.Color);
                 expect($el.Color).to.eq('rgba(0, 0, 0, 0)');
             })        
         });

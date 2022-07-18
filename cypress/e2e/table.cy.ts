@@ -23,7 +23,7 @@ describe('Table component', { env: { testReq: [''] }}, function() {
 
         context(' by columns name', { env: { allowedAt: [''] }}, function() {
             it(' should extract cell element', { env: { testKey: '' }}, function() {
-                cy.table().getCell(0, 'Product Name').should($el => {
+                cy.table().getCell(0, 0).should($el => {
                     expect($el).to.exist;
                     expect($el).to.be.visible;
                     expect($el).to.be.instanceOf(HTMLElement);

@@ -27,6 +27,10 @@ export default defineConfig({
         video: false,
         screenshotOnRunFailure: false,
         trashAssetsBeforeRuns: true,
+        retries: {
+            openMode: 2,
+            runMode: 2
+        },
         setupNodeEvents: (on, config) => {
             
         },
