@@ -1,12 +1,12 @@
-describe('Components class', { env: { testReq: [''] }}, function() {
+describe('Components class', { env: { testReq: ['JIRA-001'] }}, function() {
 
     beforeEach(function() {
         cy.visit('http://localhost:1234/');
     });
 
-    context(' for simple <H1> element', { env: { allowedAt: [''] }}, function() {
+    context(' for simple <H1> element', { env: { allowedAt: ['dev','test'], testReq: ['JIRA-1234'] }}, function() {
 
-        it(' should be located by tag', { env: { testKey: '' }}, function() {
+        it.only(' should be located by tag', { env: { testKey: 'JIRA-123' }}, function() {
             cy.component('h1').should(($el) => {
                 cy.log($el.Text);
 

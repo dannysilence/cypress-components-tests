@@ -5,6 +5,17 @@ import { defineConfig } from 'cypress';
 import cypress = require('cypress');
 
 export default defineConfig({
+    reporter: 'cypress-multi-reporters',
+    reporterOptions: {
+        "reporterEnabled": "spec,mocha-junit-reporter,@dannysilence/mocha-json-reporter",
+        "mochaJunitReporterReporterOptions": {
+            "mochaFile": "cypress/results/[hash].xml"
+        },
+        "dannysilenceMochaJsonReporterReporterOptions": {
+            "enabled": true,
+            "output": "cypress/results/[hash].json"
+        }
+    },
     defaultCommandTimeout: 15000,
     viewportWidth: 1920,
     viewportHeight: 1080,
