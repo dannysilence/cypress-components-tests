@@ -3,7 +3,7 @@ describe('Table component', { env: { testReq: [''] }}, function() {
         cy.visit('https://react-bootstrap-table.github.io/react-bootstrap-table2/storybook/iframe.html?selectedKind=Pagination&selectedStory=Basic%20Pagination%20Table');
     });
 
-    context(' when working with cells', { env: { allowedAt: [''] }}, function() {
+    context.skip(' when working with cells', { env: { allowedAt: [''] }}, function() {
         context(' by columns number', { env: { allowedAt: [''] }}, function() {
             it(' should extract cell element', { env: { testKey: '' }}, function() {
                 cy.table().getCell(0, 0).should($el => {
