@@ -18,11 +18,11 @@
   },
   "homepage": "https://github.com/dannysilence/cypress-components-tests#readme",
   "dependencies": {
-    "@dannysilence/cypress-components": "file:../cypress-components",
+    "@dannysilence/cypress-components": "1.0.30",
     "cypress": "^10.1.0"
   },
   "devDependencies": {
-    "@dannysilence/mocha-json-reporter": "^1.0.9",
+    "@dannysilence/mocha-json-reporter": "^1.0.11",
     "cypress-multi-reporters": "^1.6.1",
     "mocha-junit-reporter": "^2.0.2",
     "typescript": "^4.7.3"
