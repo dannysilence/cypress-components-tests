@@ -7,7 +7,7 @@
       "strict": false,
       "moduleResolution": "node",
       "module": "CommonJS",
-      "noEmit": false
+      "noEmit": true
     },
     //"files": ["src"],
     "include": [

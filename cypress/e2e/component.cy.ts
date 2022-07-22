@@ -4,7 +4,7 @@ describe('Components class', { env: { testReq: ['JIRA-001'] }}, function() {
         cy.visit('http://localhost:1234/');
     });
 
-    context.only(' for simple <H1> element', { env: { allowedAt: ['dev','test'], testReq: ['JIRA-1234'] }}, function() {
+    context(' for simple <H1> element', { env: { allowedAt: ['dev','test'], testReq: ['JIRA-1234'] }}, function() {
 
         it(' should be located by tag', { env: { testKey: 'JIRA-123' }}, function() {
             cy.component('h1').should(($el) => {
@@ -15,11 +15,7 @@ describe('Components class', { env: { testReq: ['JIRA-001'] }}, function() {
         });
 
         it(' should take elements text properly', { env: { testKey: '' }}, function() {
-            cy.component('h1').should(($el) => {
-                cy.log($el.Text);
-
-                expect($el.Text).to.eq('Hello, World!');
-            })        
+            cy.component('h1').getText().should('eq','Hello, World!');
         });
 
         it(' should also take elements color properly', { env: { testKey: '' }}, function() {
@@ -72,8 +68,8 @@ describe('Components class', { env: { testReq: ['JIRA-001'] }}, function() {
 
         it(' should also set elements text via its setText method', { env: { testKey: '' }}, function() {
             cy.component('#text1').should('have.property', 'Text', '');
-            cy.component('#text1').invoke('setText', 'World');
-            cy.component('#text1').its('Text').should('eq', 'World');        
+            cy.component('#text1').setText('World');
+            cy.component('#text1').setText('World!').getText().should('eq', 'World!');
         });
 
 

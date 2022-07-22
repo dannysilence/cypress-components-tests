@@ -2,7 +2,6 @@
 
 import { PartialObject } from 'cypress/types/lodash';
 import { Component, ComponentOptions, Dropdown, DropdownOptions, Factory, Table, TableOptions } from '@dannysilence/cypress-components/dist/components';
-import { METHODS } from 'cypress/types/cy-http';
 
 declare global {
     namespace Cypress {

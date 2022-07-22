@@ -7,14 +7,15 @@ import cypress = require('cypress');
 export default defineConfig({
     reporter: 'cypress-multi-reporters',
     reporterOptions: {
-        "reporterEnabled": "spec,mocha-junit-reporter,@dannysilence/mocha-json-reporter",
-        "mochaJunitReporterReporterOptions": {
-            "mochaFile": "cypress/results/[hash].xml"
-        },
-        "dannysilenceMochaJsonReporterReporterOptions": {
-            "enabled": true,
-            "output": "cypress/results/[hash].json"
-        }
+        //"reporterEnabled": "spec"
+         "reporterEnabled": "spec,mocha-junit-reporter,@dannysilence/mocha-json-reporter",
+        // "mochaJunitReporterReporterOptions": {
+        //     "mochaFile": "cypress/results/[hash].xml"
+        // },
+         "dannysilenceMochaJsonReporterReporterOptions": {
+             "enabled": true,
+             "output": "cypress/results/[hash].json"
+         }
     },
     defaultCommandTimeout: 15000,
     viewportWidth: 1920,
@@ -27,12 +28,15 @@ export default defineConfig({
         video: false,
         screenshotOnRunFailure: false,
         trashAssetsBeforeRuns: true,
+        experimentalInteractiveRunEvents: true,
         retries: {
-            openMode: 2,
-            runMode: 2
+            openMode: 1,
+            runMode: 1
         },
         setupNodeEvents: (on, config) => {
-            
+            on('after:spec', (spec)=>{
+                debugger
+            })
         },
     }
 })
